@@ -45,3 +45,37 @@ DATABASE_URL=YOUR_POSTGRES_DB_URL npm start
 ##### GET /peer-crawler/crawls
 ##### GET /peer-crawler/crawls/:id
 
+# Local Hacking
+
+To hack on validators.ripple.com, you'll need:
+
+* Docker (``apt-get install docker``)
+* Docker-compose (``pip install docker-compose``)
+
+To build the environment:
+
+```
+$ docker-compose build
+$ docker-compose run webapp npm install
+```
+
+To bring up the environment:
+
+```
+$ docker-compose up
+```
+
+You'll now have validators.ripple.com running on localhost:1337.
+
+Any modifications to the code will require:
+
+```
+$ docker-compose stop
+$ docker-compose up
+```
+
+If you need a shell:
+
+```
+$ docker-compose run webapp /bin/bash
+```
