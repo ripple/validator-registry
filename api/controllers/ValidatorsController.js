@@ -12,9 +12,10 @@ module.exports = {
    */
   index: function (req, res) {
 
-    database.Validators.findAll().then(validators => {
+    ValidatorStatsService.getValidationsInLast24Hours().then(validators => {
+
       return res.json({
-        validators: validators.map(v => v.toJSON())
+        validators: validators
       })
     })
   },
