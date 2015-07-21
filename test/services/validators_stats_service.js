@@ -16,8 +16,6 @@ describe('ValidatorStatsService', () => {
 
     ValidatorStatsService.getValidationsInLast24Hours().then(validators=> {
 
-      console.log('validators', validators)
-
       validators.forEach(validator => {
         assert(validator.id)
         assert(validator.validation_public_key)

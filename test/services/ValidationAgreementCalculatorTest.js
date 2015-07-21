@@ -4,7 +4,7 @@ import moment from 'moment'
 
 describe('ValidatorAgreementCalculator', () => {
 
-  it('.computeCorrelationIndex(validationPublicKeys, validators, start, end) should return a set of common validations', done => {
+  it.skip('.computeCorrelationIndex(validationPublicKeys, validators, start, end) should return a set of common validations', done => {
 
     var ledgerHashes = [
       'D9B5619DC1B2C91298798AE8965408719A8958857152464BAD152832E18E0F2D',
