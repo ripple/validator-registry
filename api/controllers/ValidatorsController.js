@@ -12,12 +12,12 @@ module.exports = {
    */
   index: function (req, res) {
 
-    database.Validators.findAll()
-      .then(validators => {
-        return res.json({
-          validators: validators
-        })
+    ValidatorStatsService.getValidationsInLast24Hours().then(validators => {
+
+      return res.json({
+        validators: validators
       })
+    })
   },
 
 
