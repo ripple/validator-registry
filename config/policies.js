@@ -28,10 +28,6 @@ module.exports.policies = {
 
   '*': 'disableProduction',
 
-  ValidationsController: {
-    create: ['authenticateValidationTracker']
-  }
-
   /***************************************************************************
   *                                                                          *
   * Here's an example of mapping some policies to run before a controller    *
